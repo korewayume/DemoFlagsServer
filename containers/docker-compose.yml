@@ -15,7 +15,7 @@ services:
       - "-g"
       - "daemon off;"
   vaurien:
-    image: Vaurien
+    image: registry.cn-beijing.aliyuncs.com/korewayume/flags-server-vaurien
     container_name: Vaurien
     links:
       - "nginx:nginx"
