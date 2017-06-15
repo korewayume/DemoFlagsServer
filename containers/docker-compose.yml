@@ -22,9 +22,4 @@ services:
     ports:
       - "8002:8002"
       - "8003:8003"
-    volumes:
-      - "./nginx_logs:/usr/src/app/logs"
-    command:
-      - "ping nginx -c 5 > host"
-      - "&&"
-      - "cat /etc/hosts > hosts"
+    command: ./vaurien_delay.sh | vaurien_error_delay.sh
