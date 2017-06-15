@@ -23,4 +23,9 @@ services:
       - "8002:8002"
       - "8003:8003"
     command:
-      - "./vaurien_delay.sh || ./vaurien_error_delay.sh"
+      - "vaurien"
+      - "--protocol http"
+      - "--backend nginx:8001"
+      - "--proxy 0.0.0.0:8002"
+      - "--behavior 100:delay"
+      - "--behavior-delay-sleep .5"
