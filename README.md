@@ -31,3 +31,4 @@ python3 test_scripts/flags2_threadpool.py -s LOCAL
 python3 test_scripts/flags2_threadpool.py -s DELAY 
 python3 test_scripts/flags2_threadpool.py -s ERROR 
 ```
+- 需要当前路径下存在`downloads`目录
