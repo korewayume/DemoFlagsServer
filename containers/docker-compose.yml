@@ -14,12 +14,19 @@ services:
       - "nginx"
       - "-g"
       - "daemon off;"
-  vaurien:
+  vaurien-delay:
     image: registry.cn-beijing.aliyuncs.com/korewayume/flags-server-vaurien
-    container_name: Vaurien
+    container_name: Vaurien-DELAY
     links:
       - "nginx:nginx"
     ports:
       - "8002:8002"
+    command: ./vaurien_delay.sh
+  vaurien-error:
+    image: registry.cn-beijing.aliyuncs.com/korewayume/flags-server-vaurien
+    container_name: Vaurien-ERROR
+    links:
+      - "nginx:nginx"
+    ports:
       - "8003:8003"
-    command: ./vaurien_delay.sh | vaurien_error_delay.sh
+    command: ./vaurien_error_delay.sh
