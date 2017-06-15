@@ -2,6 +2,6 @@ server {
     listen       8001;
 
     location /flags/ {
-        root   /usr/share/nginx/html/flags/;
+        root   /usr/share/nginx/html/;
     }
 }
